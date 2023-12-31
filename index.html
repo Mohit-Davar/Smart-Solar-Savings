@@ -406,6 +406,11 @@
             paragraph.style.display = (paragraph.style.display === 'block') ? 'none' : 'block';
             head.style.background = (head.style.background === "gold") ? 'white' : 'gold';
             head.style.color = (head.style.color === 'white') ? 'black' : 'white';
+        head.addEventListener('click', () => {
+            // Toggle the display property of the paragraph between 'block' and 'none'
+            paragraph.style.display = (paragraph.style.display === 'block') ? 'none' : 'block';
+            head.style.background = (head.style.background === "gold") ? 'white' : 'gold';
+            head.style.color = (head.style.color === 'white') ? 'black' : 'white';
         });
     });
 
