@@ -102,7 +102,7 @@ main{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(images/signup2.svg);
+    background-image: url(../images/signup2.svg);
 
     min-width: 300px;
 
