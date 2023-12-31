@@ -1,0 +1,110 @@
+.intro {
+    font-family: 'Ubuntu', sans-serif;
+    /* height: calc(100vh - 100px); */
+    display: flex;
+    /* height: 60vh; */
+}
+
+.intro .left {
+    text-align: start;
+    width: 50%;
+    aspect-ratio: 5/4;
+
+    padding:0px 5vw;
+
+    font-size:clamp(2rem,4vw,10rem);
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.intro .left span:nth-child(1) {
+    color: gold;
+}
+
+.intro .left span:nth-child(2) {
+    color: brown;
+}
+
+.intro .left span:nth-child(3) {
+    color: green;
+}
+
+.intro .left p {
+    font-size: clamp(1rem,1vw,10rem);
+    margin-top: 2vw;
+    text-align: start;
+
+    font-weight: lighter;
+}
+.intro .left button{
+    width: 20%;
+    min-width: 120px;
+    padding-inline: clamp(.75rem,1vw,10rem);
+    padding-block: clamp(.5rem,0.5vw,10rem);
+    font-size: clamp(.75rem,1vw,10rem);
+
+    border: none;
+    border-radius: clamp(1rem,3vw,10rem);
+    background: gold;
+    color: white;
+    text-transform: uppercase;
+
+}
+.intro .right {
+    background-image: url('../images/Solar-Energy-Illustration.jpg');
+    width: 50%;
+    aspect-ratio: 5/4;
+    background-size: cover;
+    background-position: center;
+}
+
+@media(width<=800px){
+    .intro{
+        flex-direction: column;
+    }
+    .intro .left{
+        width: 100%;
+        aspect-ratio: 2/1;
+        background: url(../images/Solar-Pnael-intro.jpg);
+
+        text-wrap: balance;
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+
+    }
+
+    
+    .intro .right{
+        display: none;
+    }
+    .intro .left p{
+        /* font-weight: 700; */
+        word-spacing: 4px;
+        text-shadow: 1px 1px 10px white;
+        line-height: 1.5rem;
+
+    }
+}
+@media(width<=900px){
+    .intro .left{
+        justify-content: space-around;
+    }
+}
+@media(width<=500px){
+    .intro .left{
+        aspect-ratio: 1/1;
+    }
+}
+@media(width<=350px){
+    .intro .left{
+        aspect-ratio: 2/3;
+background-position: left;
+        justify-content: space-evenly;
+    }
+}

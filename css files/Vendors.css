@@ -1,0 +1,65 @@
+
+.our-vendors .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1vw;
+
+    padding-top: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.our-vendors .text .heading
+{
+    font-size: clamp(1.75rem,3vw,10rem);
+    text-align: center;
+    text-wrap: balance;
+    font-weight: 500;
+    color: black;
+}
+.our-vendors .text .heading span{
+    font-family:'Lobster' ,sans-serif;
+    color: gold;
+    font-weight: 1000;
+}
+
+
+.our-vendors .text .content {
+    font-size: clamp(1rem,1.5vw,10rem);
+    font-weight: 200;
+    color: green;
+
+    text-align: center;
+    text-wrap: balance;
+
+}
+
+.our-vendors .container {
+    margin: 0px auto;
+    display: flex;
+    width: 60vw;
+    padding: 50px 0px;
+    background-color: white;
+    overflow: hidden;
+}
+.our-vendors .container .slide{
+    display: flex;
+
+    animation: slide1 35s linear infinite ;
+}
+@keyframes slide1 {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.our-vendors .container .slide img
+{
+    height: clamp(75px,15vw,1000px);
+    margin: 0px 20px;
+    transition-duration: .5s;
+}

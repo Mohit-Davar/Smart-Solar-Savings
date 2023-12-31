@@ -1,0 +1,66 @@
+.solar-energy .text-track{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+
+}
+.solar-energy .text-track .static-text{
+    font-size: clamp(1.5rem,5vw,10rem);
+    font-weight: 400;
+    color: black;
+    font-family:'Ubuntu' ,sans-serif;
+}
+.dynamic-text{
+    margin-left: 1vw;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+
+    font-family:"Lobster" ,sans-serif;
+}
+.dynamic-text li{
+    list-style: none;
+    font-size: clamp(1.5rem,5vw,10rem);
+    font-weight: 500;
+    color: gold;
+    animation: slide 16s steps(4) infinite;
+    position: relative;
+    top: 0px;
+    overflow: hidden;
+}
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+.dynamic-text li span{
+    position: relative;
+}
+.dynamic-text li span::after{
+    content: "";
+    position: absolute;
+    border-left: 2px solid gold;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: white;
+    animation: step 2s steps(var(--i)) infinite;
+    animation-direction: alternate;
+}
+@keyframes step{
+    100%{
+        left: 100%;
+        margin: 0px -35px 0px 35px;
+    }
+}
+@media(width<=750px){
+.solar-energy .text-track{
+    flex-direction: column;
+}
+.solar-energy .text-track .static-text{
+    margin-bottom: -10px;
+
+}
+}

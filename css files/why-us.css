@@ -1,0 +1,40 @@
+.why-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 3vw;
+    height: 100%;
+}
+.why-us .text {
+    font-size: clamp(1.5rem,2vw,10rem);
+    font-family:'Lobster' sans-serif;
+    text-transform: capitalize;
+
+    height: 100%;
+}
+.why-us .text div{
+    font-size: clamp(2rem,3vw,10rem);
+    font-weight: 800;
+    color: gold;
+    font-family: 'Lobster', sans-serif;
+}
+.why-us .points{
+    border-left: 2px solid rgba(0,0,0,0.5);
+
+}
+.why-us .points li
+{   
+    list-style: none;
+    font-size: clamp(1rem,1.5vw,10rem);
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}
+.why-us .points li i{
+    margin: 0px 1vw 0px 3vw;
+    color: grey;
+    font-size: clamp(0.75rem,1vw,10rem)
+}

@@ -1,0 +1,107 @@
+.testimonial-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0px auto;
+    width: 70vw;
+}
+
+.testimonial-slider .heading {
+    text-align: center;
+    font-size: clamp(1.75rem, 3vw, 10rem);
+    font-family: 'Ubuntu', serif;
+    margin-bottom: 10px;
+}
+
+.testimonial-slider .heading span {
+    font-family: 'Lobster', sans-serif;
+    color: gold;
+    font-weight: 900;
+    border-bottom: 2px solid gold;
+}
+
+.testimonial-slider .my-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.testimonial-slider .my-slide .slide {
+    background-color: gold;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* gap: 2vw; */
+    padding: 20px 2vw;
+    border-radius: 500px;
+}
+
+.testimonial-slider .my-slide .slide .image1 {
+    background-image: url(../images/th.jpeg);
+    background-position: center;
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-size: cover
+}
+
+.testimonial-slider .my-slide .slide .image2 {
+    background-image: url(../images/2269197.jpg);
+    background-position: center;
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-size: cover
+}
+
+.testimonial-slider .my-slide .slide .image3 {
+    background-image: url(../images/iStock-1167775436.jpg);
+    background-position: center;
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-size: cover
+}
+
+.testimonial-slider .my-slide .slide .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.testimonial-slider .my-slide .slide .text .inverted-commas i {
+    font-size: clamp(2rem, 3vw, 10rem);
+    font-weight: 1000;
+}
+
+.testimonial-slider .my-slide .slide .text .inner-text {
+    font-size: clamp(1rem, 1.25vw, 10rem);
+    font-weight: 500;
+}
+
+.testimonial-slider .my-slide .slide .text .name {
+    font-size: clamp(1.25rem, 1.5vw, 10rem);
+    font-weight: 100;
+}
+
+@media(width<=750px) {
+    .testimonial-slider {
+        width: 80vw;
+        overflow: hidden;
+
+    }
+
+    .testimonial-slider .my-slide .slide {
+        border-radius: 50px;
+        width:80vw;
+        margin: 0px auto;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,199 @@
+main {
+    display: flex;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.left-contact {
+    width: 50vw;
+    min-height: 100vh;
+    background-color: darkgreen;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-contact {
+    width: 50vw;
+    min-height: 100vh;
+    background-color: gold;
+}
+
+.left-contact .info-foreground {
+    z-index: 1;
+    background: gold;
+    padding: 3vw 3vw;
+
+    height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: -10px -10px black;
+}
+
+.left-contact .info-foreground .heading {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.75rem;
+    font-size: 900;
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.left-contact .info-foreground .text {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-weight: 500;
+    font-size: 1.25rem;
+
+    margin-bottom: 20px;
+}
+
+.left-contact .info-foreground .text i {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.left-contact .info-foreground .address {
+    display: flex;
+}
+
+
+
+.left-contact .info-foreground .icons a {
+    color: white;
+    font-size: 1.75rem;
+    margin-right: 5px;
+}
+
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    background: white;
+    width: 80vw;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    padding-top: 5vw;
+
+    box-shadow: 20px 20px black;
+}
+
+.form .heading {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: darkgreen;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.form .inner-form {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 45vw;
+
+}
+
+.form .inner-form label {
+    display: block;
+    font-size: 1rem;
+    color: gold;
+
+    margin-bottom: 0.25rem;
+}
+
+.form .inner-form input,
+.form .inner-form textarea {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid grey;
+    width: 20vw;
+
+    margin-bottom: 20px;
+    margin-right: 1vw;
+
+    aspect-ratio: 10/1;
+    padding: 0px 0px 0.25rem 0px;
+
+    color: grey;
+    font-size: 1.25rem;
+
+}
+
+.form .inner-form textarea {
+    width: 40vw;
+    aspect-ratio: 10/1;
+
+    padding: 0px 0px 0.25rem 0px;
+    color: grey;
+    font-size: 1.25rem;
+}
+
+.form button {
+    border: none;
+    color: white;
+    background-color: gold;
+    text-transform: uppercase;
+
+    padding: 10px 2vw;
+}
+
+/* nav{
+    display: none;
+
+    position: relative;
+    flex-direction: column;
+    background: black;
+    color: white;
+
+    width: 100vw;
+
+    z-index: 1;
+} */
+nav .icon{
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav .icon i{
+    color: white;
+}
+nav .location{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@media(width<=820px){
+    /* nav{
+        display: flex !important;
+    } */
+    .left-contact .info-foreground{
+        display: none !important;
+    }
+    .form{
+        align-items: center;
+    }
+}
+@media(width<=330px){
+    .form{
+        height: 95vh;
+    }
+}
+@media(width<=500px){
+    .form{
+        box-shadow: 10px 10px black;
+    }
+}

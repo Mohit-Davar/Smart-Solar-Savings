@@ -1,0 +1,70 @@
+
+.sun {
+    /* position: relative; */
+    /* margin-bottom: 0px; */
+
+    width: 25vw;
+    aspect-ratio: 1/1;
+
+    background-image: url('../images/BziXxdxcB.png');
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px auto;
+}
+
+.sun .smile {
+    width: 20%;
+    aspect-ratio: 1/1;
+    border-bottom: 1vw solid black;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.sun .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    gap: 1vw;
+}
+.sun .eyes {
+
+    width: 4vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.balls {
+    width: 2.5vw;
+    aspect-ratio: 1/1;
+    background-color: black;
+    border-radius: 50%;
+    border: 0.6vw solid #583329;
+    position: absolute;
+}
+
+.shade {
+    background-color: white;
+    width: .5vw;
+    height: .5vw;
+    border-radius: 50%;
+}
+@media(width<=750px){
+    .sun{
+        margin-top: -30px;
+    }
+}

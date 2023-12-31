@@ -1,0 +1,123 @@
+.service-sectors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-inline: 8vw;
+    font-family: 'Ubuntu', sans-serif;
+
+    gap: 10px;
+}
+
+.service-sectors .pre-title {
+    font-size: clamp(1rem, 2vw, 10rem);
+    font-weight: 400;
+    color: gold;
+}
+
+.service-sectors .title {
+    text-align: center;
+    font-size: clamp(1.5rem, 3vw, 10rem);
+    font-weight: 1000;
+    color: goldenrod;
+}
+
+.service-sectors .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 2vw;
+}
+
+.service-sectors .wrapper .box {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 20vw;
+
+    padding-inline: 1vw;
+    padding-block: 50px;
+
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 1px gold;
+
+}
+
+.service-sectors .wrapper .box:nth-child(1) .image {
+    background-image: url(../images/solar-panels-illustration.jpg);
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service-sectors .wrapper .box:nth-child(3) .image {
+    background-image: url(../images/istockphoto-1282629991-612x612.jpg);
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service-sectors .wrapper .box:nth-child(2) .image {
+    background-image: url(../images/preview_14643811.avif);
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service-sectors .wrapper .box .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    text-wrap: balance;
+    gap: 1.5rem;
+}
+
+.service-sectors .wrapper .box .text .heading {
+    font-size: 1.25rem;
+    font-weight: 1000;
+    color: goldenrod;
+}
+
+.service-sectors .wrapper .box .text .content {
+    font-weight: 200;
+}
+
+.service-sectors .wrapper .box .text .button {
+    width: 100%;
+}
+
+.service-sectors .wrapper .box .text .button button {
+    width: 40%;
+    border-radius: 50px;
+    height: 30px;
+
+
+    background: gold;
+    color: white;
+    text-transform: uppercase;
+
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    border: none;
+}
+
+@media(width<=735px) {
+    .service-sectors .wrapper {
+        flex-direction: column;
+    }
+    .service-sectors .wrapper .box{
+        width: 100%;
+    }
+
+
+}

@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+main{
+    width: 100vw;
+    min-height: 100vh;
+    background: gold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    background: white;
+    padding: 50px 5vw 50px 25px;
+
+    height: clamp(485px,70vh,580px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 300px;
+}
+.form .heading
+{
+    font-family: 'Ubuntu' , sans-serif;
+    font-size: clamp(1.5rem,3vw,10rem);
+}
+.form .heading span{
+    border-bottom: 5px solid gold;
+}
+.form .inner-form>div{
+    margin-bottom: 10px;
+    border-bottom: 2px solid gold;
+    padding: 0px 0px 10px 0px;
+}
+.form .inner-form .label{
+    display: block;
+    padding-left: calc(1rem + 1vw);
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    color: black;
+}
+.form .inner-form input
+{
+    outline: none;
+    border: none;
+    background: none;
+
+    width: 30vw;
+
+    font-size: 1.25rem;
+    padding-left: 1vw;
+}
+.form .inner-form{
+    font-family:'Ubuntu' ,sans-serif;
+}
+.form .inner-form .forgot-password
+{
+    border-bottom: none;
+}
+.form .inner-form .forgot-password a{
+    text-decoration: none;
+    color: gold;
+}
+.form .inner-form i{
+    color: gold;
+}
+.form .login-bttn button{
+    display: block;
+    margin: 0px auto;
+
+    background: gold;
+    padding-block: 5px;
+    width: 80%;
+
+    font-size: 1.25rem;
+
+    font-family:'Ubuntu' ,sans-serif;
+}
+.form .signup
+{
+    text-align: center;
+    font-family:'Ubuntu' ,sans-serif;
+}
+.form .signup a{
+    text-decoration: none;
+    color: gold;
+
+    margin-left: 10px;
+}
+
+.image{
+    height: clamp(485px,70vh,580px);
+    width: clamp(385px,70vh,580px);
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/signup2.svg);
+
+    min-width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.image > div{
+    margin: auto auto;
+}
+.image .heading{
+    font-size: 1.5rem;
+    text-align: center;
+    text-wrap: balance;
+}
+.image .text{
+    text-align: center;
+    font-size: 1.25rem;
+}
+.form .home a {
+    text-decoration: none;
+    /* color: white; */
+}
+
+.form .home {
+    display: block;
+    margin: 0px auto;
+
+    background: gold;
+    padding-block: 5px;
+    border: 2px solid black;
+    width: 20%;
+
+    font-size: 1rem;
+    text-align: center;
+
+    font-family: 'Ubuntu', sans-serif;
+}
+@media(width<=1000px){
+    main{
+        flex-direction: column-reverse;
+        padding-block: 50px;
+    }
+    .image{
+        width: 80vw;
+        height: 200px;
+    }
+    .form{
+        width: 80vw;
+    }
+}
