@@ -33,6 +33,8 @@
     align-items: center;
 
     transition-duration: .2s;
+
+    cursor: pointer;
 }
 .FAQ .content .block .question i{
     font-size: clamp(0.75rem,1vw,10rem);
