@@ -406,6 +406,8 @@
             paragraph.style.display = (paragraph.style.display === 'block') ? 'none' : 'block';
             head.style.background = (head.style.background === "gold") ? 'white' : 'gold';
             head.style.color = (head.style.color === 'white') ? 'black' : 'white';
+        });
+        // Add a click event listener to the h1 element
         head.addEventListener('click', () => {
             // Toggle the display property of the paragraph between 'block' and 'none'
             paragraph.style.display = (paragraph.style.display === 'block') ? 'none' : 'block';
@@ -413,6 +415,7 @@
             head.style.color = (head.style.color === 'white') ? 'black' : 'white';
         });
     });
+
 
     document.getElementById('menubar').addEventListener('click',()=>{
         document.getElementById('verticalbar').style.transform='scaleY(1)';
