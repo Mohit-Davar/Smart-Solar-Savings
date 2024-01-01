@@ -55,12 +55,21 @@
         margin: 0px -35px 0px 35px;
     }
 }
+@keyframes step2{
+    100%{
+        left: 130%;
+    }
+}
 @media(width<=750px){
 .solar-energy .text-track{
     flex-direction: column;
 }
 .solar-energy .text-track .static-text{
     margin-bottom: -10px;
-
+    }
+.dynamic-text li span::after{
+    animation: step2 2s steps(var(--i)) infinite;
+    animation-direction: alternate;
 }
+    
 }
