@@ -30,11 +30,14 @@
             box-sizing: border-box;
             /* background-color: blue; */
         }
-
+        html{
+            scroll-behavior: smooth;
+        }
         main {
             position: relative;
             top: 100px;
         }
+
 
         main section {
             margin-bottom: 4rem;
@@ -51,10 +54,11 @@
             </div>
             <div class="menu-options">
                 <div class="options" id="Home"><a href="index.html">Home</a><span></span></div>
-                <div class="options" id="Savings"><a href="">Save Money</a><span></span></div>
-                <div class="options" id="solar-panels"><a href="">Solar Panels</a><span></span></div>
-                <div class="options" id="solar-roof"><a href="">Solar Roof</a><span></span></div>
-                <div class="options" id="contact-us"><a href="Contact-form-remake.html">Contact Us</a><span></span></div>
+                <div class="options" id="Savings"><a href="calc.html">Save Money</a><span></span></div>
+                <div class="options" id="solar-panels"><a href="marketplace.html">Solar Panels</a><span></span></div>
+                <div class="options" id="solar-roof"><a href="roof.html">Solar Roof</a><span></span></div>
+                <div class="options" id="contact-us"><a href="Contact-form-remake.html">Contact Us</a><span></span>
+                </div>
                 <!-- <div class="options" id="solar-roof"><a href="">About Us</a><span></span></div> -->
             </div>
             <div class="buttons">
@@ -68,9 +72,9 @@
         </nav>
         <nav class="mobile-nav" id="verticalbar">
             <div class="options" id="Home"><a href="index.html">Home</a><span></span></div>
-            <div class="options" id="Savings"><a href="">Save Money</a><span></span></div>
-            <div class="options" id="solar-panels"><a href="">Solar Panels</a><span></span></div>
-            <div class="options" id="solar-roof"><a href="">Solar Roof</a><span></span></div>
+            <div class="options" id="Savings"><a href="calc.html">Save Money</a><span></span></div>
+            <div class="options" id="solar-panels"><a href="marketplace.html">Solar Panels</a><span></span></div>
+            <div class="options" id="solar-roof"><a href="roof.html">Solar Roof</a><span></span></div>
             <div class="options" id="contact-us"><a href="Contact-form-remake.html">Contact Us</a><span></span></div>
             <div class="cross" id="cross"><i class="fa-xmark fa-solid"></i></div>
         </nav>
@@ -168,7 +172,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <section class="why-us hidden reveal">
                 <div class="text">
                     why <div>Smart Solar Savings?</div>
@@ -247,7 +251,8 @@
             </section>
             <section class="our-vendors">
                 <div class="text">
-                    <div class="heading">Meet Your <span>Solar Partners:</span> Diverse Vendors, Limitless Solutions!
+                    <div class="heading"></i>Meet Your <span>Solar Partners:</span> Diverse Vendors, Limitless
+                        Solutions!
                     </div>
                     <div class="content">"Partnering with 20+ industry-leading manufacturers for quality assurance."
                     </div>
@@ -281,79 +286,91 @@
                 <hr>
             </section>
             <section class="FAQ">
-               <div> 
-                <div class="heading">FAQs</div>
-                <div class="content">
-                    <div class="block">
-                        <div class="question">What types of solar panels are available?<i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <div class="answer">We offer a diverse range of solar panels to cater to varying needs and
-                            preferences. Our marketplace showcases a selection of panels including monocrystalline,
-                            polycrystalline, thin-film, bifacial, and more. Each type differs in efficiency, aesthetics,
-                            and suitability for different environments, ensuring you find the right fit for your
-                            specific requirements.
+                <div>
+                    <div class="heading">FAQs</div>
+                    <div class="content">
+                        <div class="block">
+                            <div class="question">What types of solar panels are available?<i
+                                    class="fa-solid fa-chevron-down"></i></div>
+                            <div class="answer">We offer a diverse range of solar panels to cater to varying needs and
+                                preferences. Our marketplace showcases a selection of panels including monocrystalline,
+                                polycrystalline, thin-film, bifacial, and more. Each type differs in efficiency,
+                                aesthetics,
+                                and suitability for different environments, ensuring you find the right fit for your
+                                specific requirements.
+                            </div>
                         </div>
-                    </div>
-                    <div class="block">
-                        <div class="question">What payment methods are accepted on your website?<i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <div class="answer">
-                            We understand the importance of convenience in payment methods. To ensure a seamless
-                            purchasing experience, we accept various payment options including major credit cards (Visa,
-                            Mastercard, American Express), PayPal, and bank transfers. This diversity in payment methods
-                            aims to accommodate our customers' preferences and facilitate hassle-free transactions.
+                        <div class="block">
+                            <div class="question">What payment methods are accepted on your website?<i
+                                    class="fa-solid fa-chevron-down"></i></div>
+                            <div class="answer">
+                                We understand the importance of convenience in payment methods. To ensure a seamless
+                                purchasing experience, we accept various payment options including major credit cards
+                                (Visa,
+                                Mastercard, American Express), PayPal, and bank transfers. This diversity in payment
+                                methods
+                                aims to accommodate our customers' preferences and facilitate hassle-free transactions.
+                            </div>
                         </div>
-                    </div>
-                    <div class="block">
-                        <div class="question">Is there a warranty provided for the solar panels purchased?<i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <div class="answer">
-                            Yes, we prioritize customer satisfaction and confidence in the products available on our
-                            platform. All solar panels purchased through our marketplace come with comprehensive
-                            warranties provided by the respective manufacturers. The warranties typically cover
-                            manufacturing defects, performance guarantees, and ensure the panels' durability over an
-                            extended period. Details of the warranty terms for each panel are available for your review
-                            before making a purchase, ensuring transparency and peace of mind for our customers.
+                        <div class="block">
+                            <div class="question">Is there a warranty provided for the solar panels purchased?<i
+                                    class="fa-solid fa-chevron-down"></i></div>
+                            <div class="answer">
+                                Yes, we prioritize customer satisfaction and confidence in the products available on our
+                                platform. All solar panels purchased through our marketplace come with comprehensive
+                                warranties provided by the respective manufacturers. The warranties typically cover
+                                manufacturing defects, performance guarantees, and ensure the panels' durability over an
+                                extended period. Details of the warranty terms for each panel are available for your
+                                review
+                                before making a purchase, ensuring transparency and peace of mind for our customers.
+                            </div>
                         </div>
-                    </div>
-                    <div class="block">
-                        <div class="question">What are the shipping options for the solar panels?<i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <div class="answer">
-                            We provide multiple shipping options to accommodate various preferences and urgency levels.
-                            Our standard shipping ensures cost-effectiveness while maintaining reliable delivery times.
-                            Additionally, for those seeking expedited shipping, we offer express delivery options. The
-                            choice is yours, allowing flexibility to align with your project timelines.
+                        <div class="block">
+                            <div class="question">What are the shipping options for the solar panels?<i
+                                    class="fa-solid fa-chevron-down"></i></div>
+                            <div class="answer">
+                                We provide multiple shipping options to accommodate various preferences and urgency
+                                levels.
+                                Our standard shipping ensures cost-effectiveness while maintaining reliable delivery
+                                times.
+                                Additionally, for those seeking expedited shipping, we offer express delivery options.
+                                The
+                                choice is yours, allowing flexibility to align with your project timelines.
+                            </div>
                         </div>
-                    </div>
-                    <div class="block">
-                        <div class="question">What is your return policy for solar panels?<i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <div class="answer">
-                            Our return policy is designed to prioritize customer satisfaction. If for any reason you're
-                            unsatisfied with your purchase, we offer a generous return window. Solar panels can be
-                            returned within [number of days] days of receipt, provided they are in their original
-                            condition and packaging. We facilitate returns to ensure our customers' confidence and peace
-                            of mind when making a purchase through our marketplace.
+                        <div class="block">
+                            <div class="question">What is your return policy for solar panels?<i
+                                    class="fa-solid fa-chevron-down"></i></div>
+                            <div class="answer">
+                                Our return policy is designed to prioritize customer satisfaction. If for any reason
+                                you're
+                                unsatisfied with your purchase, we offer a generous return window. Solar panels can be
+                                returned within [number of days] days of receipt, provided they are in their original
+                                condition and packaging. We facilitate returns to ensure our customers' confidence and
+                                peace
+                                of mind when making a purchase through our marketplace.
+                            </div>
                         </div>
-                    </div>
-                    <div class="block">
-                        <div class="question">Are there any financing options available?<i
-                                class="fa-solid fa-chevron-down"></i></div>
-                        <div class="answer">
-                            Yes, we understand that investing in solar panels is a significant decision. To assist our
-                            customers, we've partnered with financing institutions to offer flexible financing options.
-                            Through these partnerships, eligible customers can access convenient financing plans with
-                            competitive rates, making solar energy more accessible and affordable for everyone
-                            interested in embracing renewable energy solutions. Feel free to explore our financing
-                            options to find a plan that best suits your needs and budget.
+                        <div class="block">
+                            <div class="question">Are there any financing options available?<i
+                                    class="fa-solid fa-chevron-down"></i></div>
+                            <div class="answer">
+                                Yes, we understand that investing in solar panels is a significant decision. To assist
+                                our
+                                customers, we've partnered with financing institutions to offer flexible financing
+                                options.
+                                Through these partnerships, eligible customers can access convenient financing plans
+                                with
+                                competitive rates, making solar energy more accessible and affordable for everyone
+                                interested in embracing renewable energy solutions. Feel free to explore our financing
+                                options to find a plan that best suits your needs and budget.
+                            </div>
                         </div>
                     </div>
                 </div>
-               </div>     
             </section>
         </main>
-                <footer>
+        <footer>
             <div class="icons">
                 <div class="back-to-top"><a href="#">Back to top</a></div>
                 <div class="social-media">
@@ -453,48 +470,31 @@
             autoplay: true,
             controls: false,
             autoplayButtonOutput: false,
-            responsive: {
-                1600: {
-                    items: 1,
-                    gutter: 10
-                },
-                1024: {
-                    items: 1,
-                    gutter: 10
-                },
-            }
         }
     )
 
 
 
-    // Select all elements with the class 'content' inside the FAQ section
     const faqContents = document.querySelectorAll('.FAQ .content .block');
 
-    // Iterate through each FAQ content
     faqContents.forEach(content => {
-        // Select the h1 and the paragraph inside each content
         const head = content.querySelector('.question')
         const title = content.querySelector('i');
         const paragraph = content.querySelector('.answer');
-
-        // Add a click event listener to the h1 element
         head.addEventListener('click', () => {
-            // Toggle the display property of the paragraph between 'block' and 'none'
             paragraph.style.display = (paragraph.style.display === 'block') ? 'none' : 'block';
             head.style.background = (head.style.background === "gold") ? 'white' : 'gold';
             head.style.color = (head.style.color === 'white') ? 'black' : 'white';
         });
     });
 
-
-    document.getElementById('menubar').addEventListener('click',()=>{
-        document.getElementById('verticalbar').style.transform='scaleY(1)';
-        document.getElementById('verticalbar').style.transitionDuration='0.4s';
+    document.getElementById('menubar').addEventListener('click', () => {
+        document.getElementById('verticalbar').style.transform = 'scaleY(1)';
+        document.getElementById('verticalbar').style.transitionDuration = '0.4s';
     })
-    document.getElementById('cross').addEventListener('click',()=>{
-        document.getElementById('verticalbar').style.transform='scaleY(0)';
-        document.getElementById('verticalbar').style.transitionDuration='0.1s';
+    document.getElementById('cross').addEventListener('click', () => {
+        document.getElementById('verticalbar').style.transform = 'scaleY(0)';
+        document.getElementById('verticalbar').style.transitionDuration = '0.1s';
     })
 </script>
 
