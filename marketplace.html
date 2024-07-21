@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Solar Savings</title>
+    <link rel="stylesheet" href="css files/navbar.css">
+    <link rel="stylesheet" href="css files/marketplace.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+</head>
+
+<body>
+    <div class="container">
+        <nav id="nav" class="desktop-nav">
+            <div class="logo">
+                <div class="logo-text">Logo</div>
+            </div>
+            <div class="menu-options">
+                <div class="options" id="Home"><a href="index.html">Home</a><span></span></div>
+                <div class="options" id="Savings"><a href="calc.html">Save Money</a><span></span></div>
+                <div class="options" id="solar-panels"><a href="marketplace.html">Solar Panels</a><span></span></div>
+                <div class="options" id="solar-roof"><a href="roof.html">Solar Roof</a><span></span></div>
+                <div class="options" id="contact-us"><a href="Contact-form-remake.html">Contact Us</a><span></span>
+                </div>
+                <!-- <div class="options" id="solar-roof"><a href="">About Us</a><span></span></div> -->
+            </div>
+            <div class="buttons">
+                <button class="login-signup" id="login"><a href="login-form.html">Login</a></button>
+                <button class="login-signup" id="signup"><a href="signup-form.html">Sign Up</a></button>
+                <div class="mobile-display">
+                    <i class="fa-solid fa-bars" id="menubar"></i>
+                </div>
+            </div>
+
+        </nav>
+        <nav class="mobile-nav" id="verticalbar">
+            <div class="options" id="Home"><a href="index.html">Home</a><span></span></div>
+            <div class="options" id="Savings"><a href="calc.html">Save Money</a><span></span></div>
+            <div class="options" id="solar-panels"><a href="marketplace.html">Solar Panels</a><span></span></div>
+            <div class="options" id="solar-roof"><a href="roof.html">Solar Roof</a><span></span></div>
+            <div class="options" id="contact-us"><a href="Contact-form-remake.html">Contact Us</a><span></span></div>
+            <div class="cross" id="cross"><i class="fa-xmark fa-solid"></i></div>
+        </nav>
+        <main>
+            <div class="cartcontainer">
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+    const cartcontainer = document.querySelector('.cartcontainer')
+    function generateCard(name, image, Logo, power, noOfCells, type, efficieny, measurements,guarantee, price, stock) {
+        return (
+            cartcontainer.innerHTML += `
+                            <div class="about">
+                    <div class="card">
+                        <div class="image">
+                            <img src=${image}
+                                alt="Solar Panel">
+                        </div>
+                        <div class="info">
+                            <div class="title">${name}</div>
+                            <div class="companyLogo"><img
+                                    src=${Logo}
+                                    alt="Logo"></div>
+                            <div class="stats">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Nominal Power: </td>
+                                            <td>${power}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of cells: </td>
+                                            <td>${noOfCells}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cell Type: </td>
+                                            <td>${type}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Efficiency: </td>
+                                            <td>${efficieny}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Measurements: </td>
+                                            <td>${measurements}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Guarantee: </td>
+                                            <td>${guarantee} years</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="amount">
+                            ₹ ${price}
+                        </div>
+                        <div class="available">
+                            ${stock}
+                            In Stock
+                        </div>
+                    </div>
+                </div>
+            `
+        )
+    }
+    class Card {
+        constructor(name, image, Logo, power, noOfCells, type, efficieny, measurements, guarantee, price, stock='<i class="fa-solid fa-circle-xmark" style="color: #ff0000;"></i>') {
+            this.name = name
+            this.image = image
+            this.Logo = Logo
+            this.power = power
+            this.noOfCells = noOfCells
+            this.type = type
+            this.efficieny = efficieny
+            this.measurements = measurements
+            this.guarantee = guarantee
+            this.price = price
+            this.stock = stock
+        }
+    }
+
+    const Cards = [
+        new Card("JKM440N-54HL4R-V", "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,h_150,w_130,c_pad/hpdr0citxne07f227wvw" , "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,w_60,h_22,c_pad,g_west/jjnu2myxt4fids3zybes", "440", "108", "-", "22", "1762 × 1134 × 30" ,"15", "20,000", '<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>'),
+        new Card("BISTAR TP7F54M-405", "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,h_150,w_130,c_pad/c2kmcmtceliztw1ui8ux" , "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,w_60,h_22,c_pad,g_west/ev8vgg0eaokheda4sh1v", "405", "108", "-", "21", "1722 × 1134 × 30" ,"12","25,000", '<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>'),
+        new Card("S3-380W-HC-9BB", "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,h_150,w_130,c_pad/ucpdhl5ok39smiowdh9n" , "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,w_60,h_22,c_pad,g_west/b36tagz3me7hmfnfenog", "380", "120", "-", "21", "1752 × 1038 × 35" ,"15", "22,000", '<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>'),
+        new Card("RSM40-8-410M", "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,h_150,w_130,c_pad/uhax43byfq0gfztjom0g" , "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,w_60,h_22,c_pad,g_west/mpb7h68eptmqrvmz2pj3", "410", "120", "-", "21", "1754 × 1096 × 30" ,"12", "25,500"),
+        new Card("JAM60S20-385/MR", "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,h_150,w_130,c_pad/js7znom27uxbc4kdr9yv" , "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,w_60,h_22,c_pad,g_west/chwdiayjkfdfwunc20ll", "385", "120", "-", "21", "1769 × 1052 × 30" ,"12", "30,000"),
+        new Card("JAM60S21-365/MR", "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,h_150,w_130,c_pad/vxooqg9t6laky54ykojo" , "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,w_60,h_22,c_pad,g_west/chwdiayjkfdfwunc20ll", "365", "120", "-", "20", "1769 × 1052 × 30" ,"12", "26,500", '<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>'),
+        new Card("JAM60S21-375/MR", "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,h_150,w_130,c_pad/vxooqg9t6laky54ykojo" , "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,w_60,h_22,c_pad,g_west/chwdiayjkfdfwunc20ll", "375", "120", "-", "20", "1769 × 1052 × 30" ,"12" , "28,000"),
+        new Card("HiKu6 CS6R-395 FB", "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,h_150,w_130,c_pad/dtmjvtjyefgjf1ci49a3" , "https://res.cloudinary.com/sonix-solar-gmbh/e_make_transparent:1/q_auto,f_auto,w_60,h_22,c_pad,g_west/mdua7ukjp1bgxh22gf5s", "395", "108", "-", "20", "1722 × 1134 × 30" ,"25", "45,000", '<i class="fa-solid fa-circle-check" style="color: #63E6BE;"></i>'),
+    ]
+    Cards.forEach(card => {
+        const {name, image, Logo, power, noOfCells, type, efficieny, measurements, guarantee, price, stock } = card
+        generateCard(name, image, Logo, power, noOfCells, type, efficieny, measurements, guarantee ,price, stock)
+    })
+</script>
+
+</html>
