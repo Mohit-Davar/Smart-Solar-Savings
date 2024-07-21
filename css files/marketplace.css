@@ -1,0 +1,87 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* background-color: blue; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    position: relative;
+    top: 100px;
+}
+
+main .cartcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 5px;
+    font-family: 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    gap: 10px;
+}
+
+.about {
+    border: 1px solid rgba(60, 60, 60, 0.5);
+    border-radius: 10px;
+}
+
+.cartcontainer .card {
+    padding: 40px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.card .info .title {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.card .info .stats {
+    background-color: rgba(203, 203, 203, 0.2);
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.stats table tbody tr td:nth-child(2) {
+    font-weight: bold;
+}
+
+.price {
+    background-color: gold;
+    padding: 10px 20px;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount {
+    font-weight: bold;
+}
+
+@media(width<=690px) {
+    .card .info .stats {
+        flex-direction: column;
+        width: 310px;
+    }
+    .stats table tr{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media(width<=480px) {
+    .card{
+        flex-direction: column;
+        row-gap: 5px;
+    }
+    .card .info .stats {
+        width: fit-content;
+        word-wrap: normal;
+    }
+}
