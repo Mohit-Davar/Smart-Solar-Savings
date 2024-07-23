@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Solar Savings</title>
+    <link rel="stylesheet" href="css files/calc.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="" method="post">
+            <h1>Save Money</h1>
+            <h2>See how much money you will save with solar energy</h2>
+            <div class="form-group">
+                <input type="number" placeholder=" " id="bill">
+                <label for="bill">Last bill</label>
+            </div>
+            <div class="form-group">
+                <input type="number" placeholder=" " id="area">
+                <label for="area">Area of roof</label>
+            </div>
+            <button class="submit-button" type="submit">Submit</button>
+        </form>
+        <p class="savings"></p>
+    </div>
+</body>
+<script>
+    const bill = document.querySelector("#bill")
+    const area = document.querySelector("#area")
+    const submit = document.querySelector(".submit-button")
+    const savings = document.querySelector(".savings")
+
+    submit.addEventListener("click", (e) => {
+        e.preventDefault()
+        const averageKWHPrice = 8.69
+        const energyPerSqMtr = 200
+        const energyProduced = Math.floor(area.value * energyPerSqMtr) / 1000 
+        savings.innerHTML = `You saved ${Math.floor(energyProduced * averageKWHPrice)} Rupees per month with solar.`
+    })
+</script>
+
+</html>
